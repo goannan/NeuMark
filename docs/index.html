@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuMark: Robust Audio Watermarking Resistant to Neural Resynthesis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Google Sans', sans-serif;
+            background-color: #f5f5f5;
+        }
+        .publication-title {
+            font-family: 'Google Sans', sans-serif;
+            font-weight: 700;
+        }
+        .author-block h4, .author-block h5 {
+            font-family: 'Google Sans', sans-serif;
+        }
+        .external-link {
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        audio {
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <main role="main">
+
+        <!-- Title & Authors Card -->
+        <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+            <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title"><b>NeuMark:</b></h1>
+                <h3 class="title is-2 publication-title"><b>Robust Audio Watermarking Resistant to Neural Resynthesis</b></h3>
+            </div>
+            <br>
+            <div class="is-size-5">
+                <span class="author-block">
+                    <h4 style="text-align: center;"><b>Authors: </b>Annan Wu</h4>
+                </span>
+            </div>
+            <br>
+            <div class="column has-text-centered">
+                <span class="link-block">
+                    <a href="https://github.com/goannan/NeuMark" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Abstract Card -->
+        <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-six-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justify">
+                        <p>
+                            Neural resynthesis (such as neural vocoders and generative speech codecs) introduces highly non-linear, time-variant distortions that easily destroy traditional audio watermarks. 
+                            In this work, we propose <strong>NeuMark</strong>, a robust audio watermarking framework designed specifically to withstand neural resynthesis. By embedding watermark signals directly in the robust latent space of speech representations and utilizing differentiable distortion simulations during training, NeuMark achieves superior robustness against various generative resynthesis attacks while maintaining high perceptual transparency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Demos Cards (Sample 1) -->
+        <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+            <h3>Sample 1 Audio Comparison</h3>
+            <div class="table-responsive pt-3">
+                <table class="table table-hover pt-2">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center; vertical-align:middle;">System</th>
+                            <th style="text-align: center; vertical-align:middle;">Original</th>
+                            <th style="text-align: center; vertical-align:middle;">Reconstructed</th>
+                            <th style="text-align: center; vertical-align:middle;">Watermarked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>NeuMark (Ours)</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_1_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/neumark/sample_1_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/neumark/sample_1_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>VoiceMark</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_1_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/voicemark/sample_1_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/voicemark/sample_1_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>TraceableSpeech</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_1_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/traceablespeech/sample_1_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/traceablespeech/sample_1_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>AudioSeal</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_1_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/audioseal/sample_1_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>TimbreWatermarking</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_1_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/timbrewm/sample_1_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>WavMark</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_1_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/wavmark/sample_1_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Audio Demos Cards (Sample 2) -->
+        <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+            <h3>Sample 2 Audio Comparison</h3>
+            <div class="table-responsive pt-3">
+                <table class="table table-hover pt-2">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center; vertical-align:middle;">System</th>
+                            <th style="text-align: center; vertical-align:middle;">Original</th>
+                            <th style="text-align: center; vertical-align:middle;">Reconstructed</th>
+                            <th style="text-align: center; vertical-align:middle;">Watermarked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>NeuMark (Ours)</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_2_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/neumark/sample_2_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/neumark/sample_2_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>VoiceMark</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_2_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/voicemark/sample_2_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/voicemark/sample_2_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>TraceableSpeech</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_2_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/traceablespeech/sample_2_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/traceablespeech/sample_2_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>AudioSeal</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_2_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/audioseal/sample_2_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>TimbreWatermarking</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_2_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/timbrewm/sample_2_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>WavMark</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_2_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/wavmark/sample_2_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Audio Demos Cards (Sample 3) -->
+        <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+            <h3>Sample 3 Audio Comparison</h3>
+            <div class="table-responsive pt-3">
+                <table class="table table-hover pt-2">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center; vertical-align:middle;">System</th>
+                            <th style="text-align: center; vertical-align:middle;">Original</th>
+                            <th style="text-align: center; vertical-align:middle;">Reconstructed</th>
+                            <th style="text-align: center; vertical-align:middle;">Watermarked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>NeuMark (Ours)</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_3_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/neumark/sample_3_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/neumark/sample_3_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>VoiceMark</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_3_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/voicemark/sample_3_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/voicemark/sample_3_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>TraceableSpeech</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_3_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/traceablespeech/sample_3_reconstructed.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/traceablespeech/sample_3_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>AudioSeal</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_3_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/audioseal/sample_3_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>TimbreWatermarking</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_3_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/timbrewm/sample_3_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align:middle;"><b>WavMark</b></td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/original/sample_3_original.wav?v=1" controls></audio></td>
+                            <td style="text-align: center; vertical-align:middle;">-</td>
+                            <td style="text-align: center; vertical-align:middle;"><audio src="audio/wavmark/sample_3_watermarked.wav?v=1" controls></audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
