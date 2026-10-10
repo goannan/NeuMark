@@ -1,7 +1,12 @@
 # NeuMark: Robust Audio Watermarking Resistant to Neural Resynthesis
 
 <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/-Python 3.12+-blue?style=for-the-badge&logo=python&logoColor=white"></a>
+<a href="https://arxiv.org/abs/2609.25719"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2609.25719-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white"></a>
 <a href="https://goannan.github.io/NeuMark/"><img alt="Demo Page" src="https://img.shields.io/badge/Demo%20Page-NeuMark-purple?style=for-the-badge&logo=google-chrome&logoColor=white"></a>
+
+> **NeuMark: Neural Codec Resynthesis-Robust Audio Watermarking in the Codec Latent Space**  
+> Annan Wu, Wen-Chin Huang, Tomoki Toda  
+> Paper: [arXiv:2609.25719](https://arxiv.org/abs/2609.25719)
 
 NeuMark is an open-source robust audio watermarking project utilizing SpeechTokenizer. This repository contains complete pipelines for training, validation, multi-dimensional robustness attacks, loss functions, a ready-to-test model checkpoint, and an interactive [audio demonstration page](https://goannan.github.io/NeuMark/).
 
@@ -141,4 +146,20 @@ python -m pip install -r requirements.txt
 bash dataset/prepare_data.sh
 # follow the WavTokenizer clone/download commands above
 bash train/valid.sh
+```
+
+## 📖 Citation
+
+If you find this work useful in your research, please cite:
+
+```bibtex
+@misc{wu2026neumarkneuralcodecresynthesisrobust,
+      title={NeuMark: Neural Codec Resynthesis-Robust Audio Watermarking in the Codec Latent Space}, 
+      author={Annan Wu and Wen-Chin Huang and Tomoki Toda},
+      year={2026},
+      eprint={2609.25719},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2609.25719}, 
+}
 ```
